@@ -1,0 +1,1891 @@
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (105.5ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (55.7ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20091205153524)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "cookie" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091205153524')[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("users")[0m
+/!\ FAILSAFE /!\  Sat Dec 05 10:49:56 -0500 2009
+  Status: 500 Internal Server Error
+  no such file to load -- sqlite3
+    C:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    C:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:156:in `require'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:156:in `require'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/kernel/requires.rb:7:in `require_library_or_gem'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/kernel/reporting.rb:11:in `silence_warnings'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/kernel/requires.rb:5:in `require_library_or_gem'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/sqlite3_adapter.rb:10:in `sqlite3_connection'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `send'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `new_connection'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:245:in `checkout_new_connection'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:188:in `checkout'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `loop'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `checkout'
+    C:/Ruby/lib/ruby/1.8/monitor.rb:242:in `synchronize'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:183:in `checkout'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:98:in `connection'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:326:in `retrieve_connection'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_specification.rb:123:in `retrieve_connection'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_specification.rb:115:in `connection'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:9:in `cache'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:28:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+    C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/rails/rack/static.rb:31:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+    C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/rails/rack/log_tailer.rb:17:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/webrick.rb:50:in `service'
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/webrick.rb:14:in `run'
+    C:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/commands/server.rb:111
+    C:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    C:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20091205153524)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("users")[0m
+/!\ FAILSAFE /!\  Sat Dec 05 10:51:41 -0500 2009
+  Status: 500 Internal Server Error
+  no such file to load -- sqlite3
+    C:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    C:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:156:in `require'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:156:in `require'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/kernel/requires.rb:7:in `require_library_or_gem'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/kernel/reporting.rb:11:in `silence_warnings'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/kernel/requires.rb:5:in `require_library_or_gem'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/sqlite3_adapter.rb:10:in `sqlite3_connection'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `send'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `new_connection'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:245:in `checkout_new_connection'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:188:in `checkout'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `loop'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `checkout'
+    C:/Ruby/lib/ruby/1.8/monitor.rb:242:in `synchronize'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:183:in `checkout'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:98:in `connection'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:326:in `retrieve_connection'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_specification.rb:123:in `retrieve_connection'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_specification.rb:115:in `connection'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:9:in `cache'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:28:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+    C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/rails/rack/static.rb:31:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+    C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/rails/rack/log_tailer.rb:17:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/webrick.rb:50:in `service'
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/webrick.rb:14:in `run'
+    C:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/commands/server.rb:111
+    C:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    C:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-12-05 10:56:29) [GET]
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 2980ms (View: 2971, DB: 1) | 200 OK [http://localhost/users]
+
+
+Processing Rails::InfoController#properties (for 127.0.0.1 at 2009-12-05 10:57:50) [GET]
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Completed in 42ms (View: 7, DB: 1) | 200 OK [http://localhost/rails/info/properties]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-12-05 11:07:18) [GET]
+Rendering template within layouts/users
+Rendering users/new
+Completed in 21ms (View: 13, DB: 0) | 200 OK [http://localhost/users/new]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-12-05 11:07:22) [GET]
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" [0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 10ms (View: 3, DB: 0) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-12-05 11:07:25) [GET]
+Rendering template within layouts/users
+Rendering users/new
+Completed in 13ms (View: 5, DB: 0) | 200 OK [http://localhost/users/new]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-12-05 11:07:28) [GET]
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 9ms (View: 2, DB: 0) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-12-05 11:12:37) [GET]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" [0m
+Rendering template within layouts/application
+Rendering users/index
+Completed in 20ms (View: 12, DB: 1) | 200 OK [http://localhost/users]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-12-05 11:16:21) [GET]
+
+ActionController::RoutingError (No route matches "/" with {:method=>:get}):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-12-05 11:19:54) [GET]
+
+NameError (uninitialized constant DefaultController):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (31.2ms)
+Rendered rescues/_request_and_response (2.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-12-05 11:19:57) [GET]
+
+NameError (uninitialized constant DefaultController):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (30.3ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing DefaultController#index (for 127.0.0.1 at 2009-12-05 11:22:17) [GET]
+Rendering template within layouts/application
+Rendering default/index
+Completed in 13ms (View: 11, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing DefaultController#index (for 127.0.0.1 at 2009-12-05 11:22:28) [GET]
+Rendering template within layouts/application
+Rendering default/index
+Completed in 10ms (View: 7, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing DefaultController#index (for 127.0.0.1 at 2009-12-05 11:25:53) [GET]
+Rendering template within layouts/application
+Rendering default/index
+Completed in 10ms (View: 8, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing DefaultController#index (for 127.0.0.1 at 2009-12-05 17:56:44) [GET]
+Rendering template within layouts/application
+Rendering default/index
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing DefaultController#index (for 127.0.0.1 at 2009-12-05 17:57:21) [GET]
+Rendering template within layouts/application
+Rendering default/index
+Completed in 10ms (View: 8, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing DefaultController#index (for 127.0.0.1 at 2009-12-05 17:57:32) [GET]
+Rendering template within layouts/application
+Rendering default/index
+Completed in 10ms (View: 8, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing DefaultController#index (for 127.0.0.1 at 2009-12-06 06:52:46) [POST]
+  Parameters: {"authenticity_token"=>"bIYCbR61Ex0pPZ3x4yn67isJyaXbPH0Qp2abNShv72w="}
+
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (84.0ms)
+Rendered rescues/_request_and_response (2.0ms)
+Rendering rescues/layout (unprocessable_entity)
+
+
+Processing DefaultController#index (for 127.0.0.1 at 2009-12-06 07:04:32) [GET]
+Rendering template within layouts/application
+Rendering default/index
+ERROR: compiling _run_erb_app47views47default47index46html46erb RAISED compile error
+E:/sirchris/Documents/Ruby/tweet+expand/app/views/default/index.html.erb:3: syntax error, unexpected kDO, expecting '}'
+... :url => { :action => "new" do |f| ; @output_buffer.concat "...
+                              ^
+E:/sirchris/Documents/Ruby/tweet+expand/app/views/default/index.html.erb:12: syntax error, unexpected kENSURE, expecting $end
+Function body:           def _run_erb_app47views47default47index46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<h1>Welcome to Tweet+Expand</h1>\n"
+@output_buffer.concat "<h3>Just enter your twitter username/password and we will create an RSS feed for you with expanded URLs</h3>\n"
+ form_for :default, @default, :url => { :action => "new" do |f| ; @output_buffer.concat "\n"
+@output_buffer.concat "\t<label for=\"default_username\">Username</label>\n"
+@output_buffer.concat "\t"; @output_buffer.concat(( f.text_field :username ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t<br />\n"
+@output_buffer.concat "\t<label for=\"default_password\">Password</label>\n"
+@output_buffer.concat "\t"; @output_buffer.concat(( f.text_field :password ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t<br />\n"
+@output_buffer.concat "\t"; @output_buffer.concat(( submit_tag 'Get Tweets' ).to_s); @output_buffer.concat "\n"
+ end ; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: E:/sirchris/Documents/Ruby/tweet+expand/app/views/default/index.html.erb:12:in `compile!'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:61:in `compile'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:28:in `render'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/template.rb:205:in `render_template'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:265:in `render'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:348:in `_render_with_layout'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:262:in `render'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1250:in `render_for_file'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:945:in `render_without_benchmark'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1326:in `default_render'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1338:in `perform_action_without_filters'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:617:in `call_filters'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/flash.rb:146:in `perform_action'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `send'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `process_without_filters'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:606:in `process'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:391:in `process'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:386:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/routing/route_set.rb:437:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:87:in `dispatch'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:121:in `_call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:9:in `cache'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:28:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/rails/rack/static.rb:31:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/rails/rack/log_tailer.rb:17:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/webrick.rb:50:in `service'
+C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/webrick.rb:14:in `run'
+C:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/commands/server.rb:111
+C:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+C:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+E:/sirchris/Documents/Ruby/tweet+expand/app/views/default/index.html.erb:3: syntax error, unexpected kDO, expecting '}'
+... :url => { :action => "new" do |f| ; @output_buffer.concat "...
+                              ^
+E:/sirchris/Documents/Ruby/tweet+expand/app/views/default/index.html.erb:12: syntax error, unexpected kENSURE, expecting $end) on line #3 of app/views/default/index.html.erb:
+1: <h1>Welcome to Tweet+Expand</h1>
+2: <h3>Just enter your twitter username/password and we will create an RSS feed for you with expanded URLs</h3>
+3: <% form_for :default, @default, :url => { :action => "new" do |f| %>
+4: 	<label for="default_username">Username</label>
+5: 	<%= f.text_field :username %>
+6: 	<br />
+
+    app/views/default/index.html.erb:12:in `compile!'
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (43.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing DefaultController#index (for 127.0.0.1 at 2009-12-06 07:05:19) [GET]
+Rendering template within layouts/application
+Rendering default/index
+Completed in 62ms (View: 61, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing DefaultController#new (for 127.0.0.1 at 2009-12-06 07:05:48) [POST]
+  Parameters: {"default"=>{"username"=>"", "password"=>""}, "commit"=>"Get Tweets", "authenticity_token"=>"UWMe8Im05WfVxkkoglOUF8bxLmH6q7OJT1N+IUZvmVg="}
+Rendering template within layouts/application
+Rendering default/new
+Completed in 9ms (View: 7, DB: 0) | 200 OK [http://localhost/default/new]
+
+
+Processing DefaultController#new (for 127.0.0.1 at 2009-12-06 08:43:25) [POST]
+  Parameters: {"default"=>{"username"=>"test", "password"=>""}, "commit"=>"Get Tweets", "authenticity_token"=>"UWMe8Im05WfVxkkoglOUF8bxLmH6q7OJT1N+IUZvmVg="}
+
+ActionView::MissingTemplate (Missing template default/new.erb in view path app/views):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing DefaultController#index (for 127.0.0.1 at 2009-12-06 08:43:28) [GET]
+Rendering template within layouts/application
+Rendering default/index
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #3 of app/views/default/index.html.erb:
+1: <h1>Welcome to Tweet+Expand</h1>
+2: <h3>Just enter your twitter username/password and we will create an RSS feed for you with expanded URLs</h3>
+3: <% form_for (@default) do |f| %>
+4: 	<label for="default_username">Username</label>
+5: 	<%= f.text_field :username %>
+6: 	<br />
+
+    app/views/default/index.html.erb:3
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (47.8ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing DefaultController#index (for 127.0.0.1 at 2009-12-06 08:44:38) [GET]
+Rendering template within layouts/application
+Rendering default/index
+Completed in 12ms (View: 10, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing DefaultController#new (for 127.0.0.1 at 2009-12-06 08:44:40) [POST]
+  Parameters: {"default"=>{"username"=>"test", "password"=>""}, "commit"=>"Get Tweets", "authenticity_token"=>"UWMe8Im05WfVxkkoglOUF8bxLmH6q7OJT1N+IUZvmVg="}
+
+ActionView::MissingTemplate (Missing template default/new.erb in view path app/views):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing DefaultController#index (for 127.0.0.1 at 2009-12-06 08:44:49) [GET]
+Rendering template within layouts/application
+Rendering default/index
+Completed in 11ms (View: 9, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing DefaultController#index (for 127.0.0.1 at 2009-12-06 08:44:50) [POST]
+  Parameters: {"default"=>{"username"=>"rwar", "password"=>""}, "commit"=>"Get Tweets", "authenticity_token"=>"UWMe8Im05WfVxkkoglOUF8bxLmH6q7OJT1N+IUZvmVg="}
+Rendering template within layouts/application
+Rendering default/index
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing DefaultController#index (for 127.0.0.1 at 2009-12-06 08:44:53) [POST]
+  Parameters: {"default"=>{"username"=>"test", "password"=>""}, "commit"=>"Get Tweets", "authenticity_token"=>"UWMe8Im05WfVxkkoglOUF8bxLmH6q7OJT1N+IUZvmVg="}
+Rendering template within layouts/application
+Rendering default/index
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing DefaultController#index (for 127.0.0.1 at 2009-12-06 08:44:54) [POST]
+  Parameters: {"default"=>{"username"=>"", "password"=>""}, "commit"=>"Get Tweets", "authenticity_token"=>"UWMe8Im05WfVxkkoglOUF8bxLmH6q7OJT1N+IUZvmVg="}
+Rendering template within layouts/application
+Rendering default/index
+Completed in 9ms (View: 5, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing DefaultController#index (for 127.0.0.1 at 2009-12-06 08:45:21) [POST]
+  Parameters: {"default"=>{"username"=>"", "password"=>""}, "commit"=>"Get Tweets", "authenticity_token"=>"UWMe8Im05WfVxkkoglOUF8bxLmH6q7OJT1N+IUZvmVg="}
+Rendering template within layouts/application
+Rendering default/index
+Completed in 11ms (View: 9, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing DefaultController#index (for 127.0.0.1 at 2009-12-06 08:45:39) [GET]
+Rendering template within layouts/application
+Rendering default/index
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing DefaultController#index (for 127.0.0.1 at 2009-12-06 08:45:43) [POST]
+  Parameters: {"default"=>{"username"=>"test", "password"=>"test"}, "commit"=>"Get Tweets", "authenticity_token"=>"UWMe8Im05WfVxkkoglOUF8bxLmH6q7OJT1N+IUZvmVg="}
+Rendering template within layouts/application
+Rendering default/index
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing DefaultController#index (for 127.0.0.1 at 2009-12-06 10:39:03) [GET]
+Rendering template within layouts/application
+Rendering default/index
+Completed in 6ms (View: 3, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing DefaultController#index (for 127.0.0.1 at 2009-12-06 10:39:07) [POST]
+  Parameters: {"default"=>{"username"=>"test", "password"=>""}, "commit"=>"Get Tweets", "authenticity_token"=>"UWMe8Im05WfVxkkoglOUF8bxLmH6q7OJT1N+IUZvmVg="}
+Rendering template within layouts/application
+Rendering default/index
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing DefaultController#index (for 127.0.0.1 at 2009-12-06 10:39:09) [GET]
+Rendering template within layouts/application
+Rendering default/index
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing DefaultController#index (for 127.0.0.1 at 2009-12-06 10:39:11) [GET]
+Rendering template within layouts/application
+Rendering default/index
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing DefaultController#index (for 127.0.0.1 at 2009-12-06 10:40:39) [GET]
+Rendering template within layouts/application
+Rendering default/index
+Completed in 11ms (View: 9, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing DefaultController#index (for 127.0.0.1 at 2009-12-06 10:40:44) [POST]
+  Parameters: {"default"=>{"username"=>"test", "password"=>""}, "commit"=>"Get Tweets", "authenticity_token"=>"UWMe8Im05WfVxkkoglOUF8bxLmH6q7OJT1N+IUZvmVg="}
+Rendering template within layouts/application
+Rendering default/index
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing DefaultController#index (for 127.0.0.1 at 2009-12-06 10:40:44) [POST]
+  Parameters: {"default"=>{"username"=>"", "password"=>""}, "commit"=>"Get Tweets", "authenticity_token"=>"UWMe8Im05WfVxkkoglOUF8bxLmH6q7OJT1N+IUZvmVg="}
+Rendering template within layouts/application
+Rendering default/index
+Completed in 8ms (View: 5, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing DefaultController#index (for 127.0.0.1 at 2009-12-06 10:40:47) [POST]
+  Parameters: {"default"=>{"username"=>"tet", "password"=>"ste"}, "commit"=>"Get Tweets", "authenticity_token"=>"UWMe8Im05WfVxkkoglOUF8bxLmH6q7OJT1N+IUZvmVg="}
+Rendering template within layouts/application
+Rendering default/index
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing DefaultController#index (for 127.0.0.1 at 2009-12-06 10:41:05) [POST]
+  Parameters: {"default"=>{"username"=>"tet", "password"=>"ste"}, "commit"=>"Get Tweets", "authenticity_token"=>"UWMe8Im05WfVxkkoglOUF8bxLmH6q7OJT1N+IUZvmVg="}
+Rendering template within layouts/application
+Rendering default/index
+Completed in 11ms (View: 9, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing DefaultController#index (for 127.0.0.1 at 2009-12-06 10:47:59) [GET]
+Rendering template within layouts/application
+Rendering default/index
+
+ActionView::TemplateError (undefined method `password_field_tag' for #<ActionView::Helpers::FormBuilder:0x44c7de0>) on line #8 of app/views/default/index.html.erb:
+5: 	<%= f.text_field :username %>
+6: 	<br />
+7: 	<%= label_tag(:password, "Password") %>
+8: 	<%= f.password_field_tag :password %>
+9: 	<br />
+10: 	<%= submit_tag 'Get Tweets' %>
+11: 	<h3><%=h @username %></h3>
+
+    app/views/default/index.html.erb:8
+    app/views/default/index.html.erb:3
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (45.9ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing DefaultController#index (for 127.0.0.1 at 2009-12-06 10:48:01) [GET]
+Rendering template within layouts/application
+Rendering default/index
+
+ActionView::TemplateError (undefined method `password_field_tag' for #<ActionView::Helpers::FormBuilder:0x5994858>) on line #8 of app/views/default/index.html.erb:
+5: 	<%= f.text_field :username %>
+6: 	<br />
+7: 	<%= label_tag(:password, "Password") %>
+8: 	<%= f.password_field_tag :password %>
+9: 	<br />
+10: 	<%= submit_tag 'Get Tweets' %>
+11: 	<h3><%=h @username %></h3>
+
+    app/views/default/index.html.erb:8
+    app/views/default/index.html.erb:3
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (99.6ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing DefaultController#index (for 127.0.0.1 at 2009-12-06 10:48:06) [GET]
+Rendering template within layouts/application
+Rendering default/index
+
+ActionView::TemplateError (undefined method `password_field_tag' for #<ActionView::Helpers::FormBuilder:0x5c32368>) on line #8 of app/views/default/index.html.erb:
+5: 	<%= f.text_field :username %>
+6: 	<br />
+7: 	<%= label_tag(:password, "Password") %>
+8: 	<%= f.password_field_tag :password %>
+9: 	<br />
+10: 	<%= submit_tag 'Get Tweets' %>
+11: 	<h3><%=h @username %></h3>
+
+    app/views/default/index.html.erb:8
+    app/views/default/index.html.erb:3
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (44.9ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing DefaultController#index (for 127.0.0.1 at 2009-12-06 10:48:23) [GET]
+Rendering template within layouts/application
+Rendering default/index
+Completed in 11ms (View: 10, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing DefaultController#index (for 127.0.0.1 at 2009-12-06 10:48:25) [GET]
+Rendering template within layouts/application
+Rendering default/index
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing DefaultController#index (for 127.0.0.1 at 2009-12-06 10:48:29) [POST]
+  Parameters: {"default"=>{"username"=>"test"}, "commit"=>"Get Tweets", "authenticity_token"=>"UWMe8Im05WfVxkkoglOUF8bxLmH6q7OJT1N+IUZvmVg=", "password"=>""}
+Rendering template within layouts/application
+Rendering default/index
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing DefaultController#index (for 127.0.0.1 at 2009-12-06 10:48:29) [POST]
+  Parameters: {"default"=>{"username"=>""}, "commit"=>"Get Tweets", "authenticity_token"=>"UWMe8Im05WfVxkkoglOUF8bxLmH6q7OJT1N+IUZvmVg=", "password"=>""}
+Rendering template within layouts/application
+Rendering default/index
+Completed in 63ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing DefaultController#index (for 127.0.0.1 at 2009-12-06 10:48:35) [GET]
+Rendering template within layouts/application
+Rendering default/index
+
+ActionView::TemplateError (wrong number of arguments (1 for 2)) on line #5 of app/views/default/index.html.erb:
+2: <h3>Just enter your twitter username/password and we will create an RSS feed for you with expanded URLs</h3>
+3: <% form_for :default, @default do |f| %>
+4: 	<%= label_tag(:username, "Username") %>
+5: 	<%= text_field :username %>
+6: 	<br />
+7: 	<%= label_tag(:password, "Password") %>
+8: 	<%= password_field_tag :password %>
+
+    app/views/default/index.html.erb:5:in `text_field'
+    app/views/default/index.html.erb:5
+    app/views/default/index.html.erb:3
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (47.8ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing DefaultController#index (for 127.0.0.1 at 2009-12-06 10:48:37) [GET]
+Rendering template within layouts/application
+Rendering default/index
+
+ActionView::TemplateError (wrong number of arguments (1 for 2)) on line #5 of app/views/default/index.html.erb:
+2: <h3>Just enter your twitter username/password and we will create an RSS feed for you with expanded URLs</h3>
+3: <% form_for :default, @default do |f| %>
+4: 	<%= label_tag(:username, "Username") %>
+5: 	<%= text_field :username %>
+6: 	<br />
+7: 	<%= label_tag(:password, "Password") %>
+8: 	<%= password_field_tag :password %>
+
+    app/views/default/index.html.erb:5:in `text_field'
+    app/views/default/index.html.erb:5
+    app/views/default/index.html.erb:3
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (97.6ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing DefaultController#index (for 127.0.0.1 at 2009-12-06 10:49:23) [GET]
+Rendering template within layouts/application
+Rendering default/index
+
+ActionView::TemplateError (undefined method `password_tag' for #<ActionView::Helpers::FormBuilder:0x5b03a10>) on line #8 of app/views/default/index.html.erb:
+5: 	<%= f.text_field :username %>
+6: 	<br />
+7: 	<%= label_tag(:password, "Password") %>
+8: 	<%= f.password_tag :password %>
+9: 	<br />
+10: 	<%= submit_tag 'Get Tweets' %>
+11: 	<h3><%=h @username %></h3>
+
+    app/views/default/index.html.erb:8
+    app/views/default/index.html.erb:3
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (46.9ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing DefaultController#index (for 127.0.0.1 at 2009-12-06 10:50:26) [GET]
+Rendering template within layouts/application
+Rendering default/index
+Completed in 11ms (View: 9, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing DefaultController#index (for 127.0.0.1 at 2009-12-06 10:50:29) [POST]
+  Parameters: {"commit"=>"Get Tweets", "authenticity_token"=>"UWMe8Im05WfVxkkoglOUF8bxLmH6q7OJT1N+IUZvmVg=", "username"=>"test", "password"=>"test"}
+Rendering template within layouts/application
+Rendering default/index
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing DefaultController#index (for 127.0.0.1 at 2009-12-06 10:52:07) [POST]
+  Parameters: {"default"=>{"username"=>"tet", "password"=>"ste"}, "commit"=>"Get Tweets", "authenticity_token"=>"UWMe8Im05WfVxkkoglOUF8bxLmH6q7OJT1N+IUZvmVg="}
+Rendering template within layouts/application
+Rendering default/index
+Completed in 12ms (View: 8, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing DefaultController#index (for 127.0.0.1 at 2009-12-06 10:52:52) [GET]
+Rendering template within layouts/application
+Rendering default/index
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing DefaultController#index (for 127.0.0.1 at 2009-12-06 10:52:55) [POST]
+  Parameters: {"commit"=>"Get Tweets", "authenticity_token"=>"UWMe8Im05WfVxkkoglOUF8bxLmH6q7OJT1N+IUZvmVg=", "username"=>"test", "password"=>"test"}
+Rendering template within layouts/application
+Rendering default/index
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-12-06 11:13:37) [GET]
+
+ActionController::MethodNotAllowed (Only post requests are allowed.):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (26.4ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (method_not_allowed)
+
+
+Processing ApplicationController#create (for 127.0.0.1 at 2009-12-06 11:13:43) [POST]
+  Parameters: {"default"=>{"username"=>"tet", "password"=>"ste"}, "commit"=>"Get Tweets", "authenticity_token"=>"UWMe8Im05WfVxkkoglOUF8bxLmH6q7OJT1N+IUZvmVg="}
+
+NameError (uninitialized constant DefaultsController):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (82.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing DefaultController#create (for 127.0.0.1 at 2009-12-06 11:26:04) [GET]
+
+ActionView::MissingTemplate (Missing template default/create.erb in view path app/views):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing DefaultController#index (for 127.0.0.1 at 2009-12-06 11:29:33) [GET]
+Rendering template within layouts/application
+Rendering default/index
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing DefaultController#create (for 127.0.0.1 at 2009-12-06 11:29:37) [POST]
+  Parameters: {"commit"=>"Get Tweets", "authenticity_token"=>"UWMe8Im05WfVxkkoglOUF8bxLmH6q7OJT1N+IUZvmVg=", "username"=>"test", "password"=>""}
+
+ActionView::MissingTemplate (Missing template default/create.erb in view path app/views):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing DefaultController#index (for 127.0.0.1 at 2009-12-06 11:30:59) [GET]
+Rendering template within layouts/application
+Rendering default/index
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing DefaultController#index (for 127.0.0.1 at 2009-12-06 11:32:23) [GET]
+Rendering template within layouts/application
+Rendering default/index
+Completed in 11ms (View: 9, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing DefaultController#index (for 127.0.0.1 at 2009-12-06 11:32:37) [GET]
+Rendering template within layouts/application
+Rendering default/index
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing DefaultController#index (for 127.0.0.1 at 2009-12-06 11:32:39) [GET]
+Rendering template within layouts/application
+Rendering default/index
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing DefaultController#index (for 127.0.0.1 at 2009-12-06 11:35:20) [GET]
+Rendering template within layouts/application
+Rendering default/index
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing DefaultController#create (for 127.0.0.1 at 2009-12-06 11:35:26) [POST]
+  Parameters: {"commit"=>"Get Tweets", "authenticity_token"=>"UWMe8Im05WfVxkkoglOUF8bxLmH6q7OJT1N+IUZvmVg=", "username"=>"test", "password"=>""}
+
+ActionView::MissingTemplate (Missing template default/create.erb in view path app/views):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing DefaultController#index (for 127.0.0.1 at 2009-12-06 11:36:24) [GET]
+Rendering template within layouts/application
+Rendering default/index
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing DefaultController#index (for 127.0.0.1 at 2009-12-06 11:38:26) [GET]
+Rendering template within layouts/application
+Rendering default/index
+Completed in 7ms (View: 5, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing DefaultController#create (for 127.0.0.1 at 2009-12-06 11:38:29) [POST]
+  Parameters: {"commit"=>"Get Tweets", "authenticity_token"=>"UWMe8Im05WfVxkkoglOUF8bxLmH6q7OJT1N+IUZvmVg=", "username"=>"rwatr", "password"=>""}
+
+ActionView::MissingTemplate (Missing template default/create.erb in view path app/views):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing DefaultController#create (for 127.0.0.1 at 2009-12-06 11:39:33) [POST]
+  Parameters: {"commit"=>"Get Tweets", "authenticity_token"=>"UWMe8Im05WfVxkkoglOUF8bxLmH6q7OJT1N+IUZvmVg=", "username"=>"rwatr", "password"=>""}
+Rendering template within layouts/application
+Rendering default/create
+Completed in 12ms (View: 10, DB: 0) | 200 OK [http://localhost/default]
+
+
+Processing DefaultController#create (for 127.0.0.1 at 2009-12-06 11:39:56) [POST]
+  Parameters: {"commit"=>"Get Tweets", "authenticity_token"=>"UWMe8Im05WfVxkkoglOUF8bxLmH6q7OJT1N+IUZvmVg=", "username"=>"rwatr", "password"=>""}
+Rendering template within layouts/application
+Rendering default/create
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/default]
+
+
+Processing DefaultController#index (for 127.0.0.1 at 2009-12-06 11:41:21) [GET]
+Rendering template within layouts/application
+Rendering default/index
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing DefaultController#create (for 127.0.0.1 at 2009-12-06 11:41:24) [POST]
+  Parameters: {"commit"=>"Get Tweets", "authenticity_token"=>"UWMe8Im05WfVxkkoglOUF8bxLmH6q7OJT1N+IUZvmVg=", "username"=>"test", "password"=>""}
+Rendering template within layouts/application
+Rendering default/index
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://localhost/default]
+
+
+Processing DefaultController#index (for 127.0.0.1 at 2009-12-06 11:41:45) [GET]
+Rendering template within layouts/application
+Rendering default/index
+Completed in 7ms (View: 5, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing DefaultController#create (for 127.0.0.1 at 2009-12-06 11:41:53) [POST]
+  Parameters: {"commit"=>"Get Tweets", "authenticity_token"=>"UWMe8Im05WfVxkkoglOUF8bxLmH6q7OJT1N+IUZvmVg=", "username"=>"ytr", "password"=>""}
+Rendering template within layouts/application
+Rendering default/index
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://localhost/default]
+
+
+Processing DefaultController#create (for 127.0.0.1 at 2009-12-06 13:30:33) [POST]
+  Parameters: {"commit"=>"Get Tweets", "authenticity_token"=>"UWMe8Im05WfVxkkoglOUF8bxLmH6q7OJT1N+IUZvmVg=", "username"=>"qwer", "password"=>""}
+Rendering template within layouts/application
+Rendering default/index
+Completed in 7ms (View: 4, DB: 0) | 200 OK [http://localhost/default]
+
+
+Processing DefaultController#index (for 127.0.0.1 at 2009-12-07 06:45:10) [GET]
+Rendering template within layouts/application
+Rendering default/index
+Completed in 51ms (View: 49, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing DefaultController#create (for 127.0.0.1 at 2009-12-07 06:45:20) [POST]
+  Parameters: {"commit"=>"Get Tweets", "authenticity_token"=>"UWMe8Im05WfVxkkoglOUF8bxLmH6q7OJT1N+IUZvmVg=", "username"=>"sirchristian", "password"=>"very_good"}
+Rendering template within layouts/application
+Rendering default/index
+Completed in 3442ms (View: 5, DB: 0) | 200 OK [http://localhost/default]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-12-08 06:25:39) [GET]
+
+SyntaxError (E:/sirchris/Documents/Ruby/tweet+expand/app/controllers/default_controller.rb:14: syntax error, unexpected '|', expecting '}'
+    { |tweet| 
+       ^
+E:/sirchris/Documents/Ruby/tweet+expand/app/controllers/default_controller.rb:16: syntax error, unexpected '}', expecting kEND):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (34.2ms)
+Rendered rescues/_request_and_response (2.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing DefaultController#index (for 127.0.0.1 at 2009-12-08 06:26:40) [GET]
+Rendering template within layouts/application
+Rendering default/index
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each) on line #13 of app/views/default/index.html.erb:
+10: 	<%= submit_tag 'Get Tweets' %>
+11: <% end %>
+12: 
+13: <% @tweets.each { |tweet| %>
+14: 	<strong><%= tweet[:user] %>: </strong>
+15: 	<%= tweet[:text] %>
+16: 	( <%= tweet[:at] %> )  
+
+    app/views/default/index.html.erb:13
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (105.5ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing DefaultController#index (for 127.0.0.1 at 2009-12-08 06:29:45) [GET]
+Rendering template within layouts/application
+Rendering default/index
+Completed in 11ms (View: 9, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing DefaultController#create (for 127.0.0.1 at 2009-12-08 06:29:52) [POST]
+  Parameters: {"commit"=>"Get Tweets", "authenticity_token"=>"UWMe8Im05WfVxkkoglOUF8bxLmH6q7OJT1N+IUZvmVg=", "username"=>"sirchristian", "password"=>"very_good"}
+Rendering template within layouts/application
+Rendering default/index
+Completed in 420ms (View: 3, DB: 0) | 200 OK [http://localhost/default]
+
+
+Processing DefaultController#index (for 127.0.0.1 at 2009-12-08 06:30:03) [GET]
+Rendering template within layouts/application
+Rendering default/index
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://localhost/default]
+
+
+Processing DefaultController#create (for 127.0.0.1 at 2009-12-08 06:30:53) [POST]
+  Parameters: {"commit"=>"Get Tweets", "authenticity_token"=>"UWMe8Im05WfVxkkoglOUF8bxLmH6q7OJT1N+IUZvmVg=", "username"=>"sirchristian", "password"=>"very_good"}
+Rendering template within layouts/application
+Rendering default/index
+Completed in 401ms (View: 9, DB: 0) | 200 OK [http://localhost/default]
+
+
+Processing DefaultController#create (for 127.0.0.1 at 2009-12-08 06:32:30) [POST]
+  Parameters: {"commit"=>"Get Tweets", "authenticity_token"=>"UWMe8Im05WfVxkkoglOUF8bxLmH6q7OJT1N+IUZvmVg=", "username"=>"sirchristian", "password"=>"very_good"}
+Rendering template within layouts/application
+Rendering default/index
+Completed in 465ms (View: 3, DB: 0) | 200 OK [http://localhost/default]
+
+
+Processing DefaultController#index (for 127.0.0.1 at 2009-12-08 06:38:36) [GET]
+Rendering template within layouts/application
+Rendering default/index
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#create (for 127.0.0.1 at 2009-12-09 06:31:22) [POST]
+  Parameters: {"commit"=>"Get Tweets", "authenticity_token"=>"UWMe8Im05WfVxkkoglOUF8bxLmH6q7OJT1N+IUZvmVg=", "username"=>"sirchristian", "password"=>"very_good"}
+
+SyntaxError (E:/sirchris/Documents/Ruby/tweet+expand/app/controllers/default_controller.rb:44: syntax error, unexpected $end, expecting kEND):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (32.2ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#create (for 127.0.0.1 at 2009-12-09 06:37:55) [POST]
+  Parameters: {"commit"=>"Get Tweets", "authenticity_token"=>"UWMe8Im05WfVxkkoglOUF8bxLmH6q7OJT1N+IUZvmVg=", "username"=>"sirchristian", "password"=>"very_good"}
+
+SyntaxError (E:/sirchris/Documents/Ruby/tweet+expand/app/controllers/default_controller.rb:43: syntax error, unexpected $end, expecting kEND
+  end
+     ^):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (33.2ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing DefaultController#create (for 127.0.0.1 at 2009-12-09 06:39:10) [POST]
+  Parameters: {"commit"=>"Get Tweets", "authenticity_token"=>"UWMe8Im05WfVxkkoglOUF8bxLmH6q7OJT1N+IUZvmVg=", "username"=>"sirchristian", "password"=>"very_good"}
+
+NameError (undefined local variable or method `nill' for #<DefaultController:0x7406c28>):
+  app/controllers/default_controller.rb:26:in `expand_tweet_user'
+  app/controllers/default_controller.rb:17:in `create'
+  app/controllers/default_controller.rb:16:in `map'
+  app/controllers/default_controller.rb:16:in `create'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (35.2ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing DefaultController#create (for 127.0.0.1 at 2009-12-09 06:39:21) [POST]
+  Parameters: {"commit"=>"Get Tweets", "authenticity_token"=>"UWMe8Im05WfVxkkoglOUF8bxLmH6q7OJT1N+IUZvmVg=", "username"=>"sirchristian", "password"=>"very_good"}
+
+NameError (undefined local variable or method `url' for #<DefaultController:0x75ec358>):
+  app/controllers/default_controller.rb:35:in `expand_tweet_user'
+  app/controllers/default_controller.rb:33:in `scan'
+  app/controllers/default_controller.rb:33:in `expand_tweet_user'
+  app/controllers/default_controller.rb:17:in `create'
+  app/controllers/default_controller.rb:16:in `map'
+  app/controllers/default_controller.rb:16:in `create'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (39.1ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing DefaultController#create (for 127.0.0.1 at 2009-12-09 06:39:37) [POST]
+  Parameters: {"commit"=>"Get Tweets", "authenticity_token"=>"UWMe8Im05WfVxkkoglOUF8bxLmH6q7OJT1N+IUZvmVg=", "username"=>"sirchristian", "password"=>"very_good"}
+
+NameError (undefined local variable or method `smallurl' for #<DefaultController:0x7429110>):
+  app/controllers/default_controller.rb:37:in `expand_tweet_user'
+  app/controllers/default_controller.rb:33:in `scan'
+  app/controllers/default_controller.rb:33:in `expand_tweet_user'
+  app/controllers/default_controller.rb:17:in `create'
+  app/controllers/default_controller.rb:16:in `map'
+  app/controllers/default_controller.rb:16:in `create'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (37.1ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing DefaultController#create (for 127.0.0.1 at 2009-12-09 06:39:49) [POST]
+  Parameters: {"commit"=>"Get Tweets", "authenticity_token"=>"UWMe8Im05WfVxkkoglOUF8bxLmH6q7OJT1N+IUZvmVg=", "username"=>"sirchristian", "password"=>"very_good"}
+
+RuntimeError (string modified):
+  app/controllers/default_controller.rb:33:in `scan'
+  app/controllers/default_controller.rb:33:in `expand_tweet_user'
+  app/controllers/default_controller.rb:17:in `create'
+  app/controllers/default_controller.rb:16:in `map'
+  app/controllers/default_controller.rb:16:in `create'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (38.1ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing DefaultController#create (for 127.0.0.1 at 2009-12-09 06:40:59) [POST]
+  Parameters: {"commit"=>"Get Tweets", "authenticity_token"=>"UWMe8Im05WfVxkkoglOUF8bxLmH6q7OJT1N+IUZvmVg=", "username"=>"sirchristian", "password"=>"very_good"}
+
+RuntimeError (string modified):
+  app/controllers/default_controller.rb:34:in `scan'
+  app/controllers/default_controller.rb:34:in `expand_tweet_user'
+  app/controllers/default_controller.rb:17:in `create'
+  app/controllers/default_controller.rb:16:in `map'
+  app/controllers/default_controller.rb:16:in `create'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (36.1ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing DefaultController#create (for 127.0.0.1 at 2009-12-09 06:41:24) [POST]
+  Parameters: {"commit"=>"Get Tweets", "authenticity_token"=>"UWMe8Im05WfVxkkoglOUF8bxLmH6q7OJT1N+IUZvmVg=", "username"=>"sirchristian", "password"=>"very_good"}
+
+RuntimeError (string modified):
+  app/controllers/default_controller.rb:34:in `scan'
+  app/controllers/default_controller.rb:34:in `expand_tweet_user'
+  app/controllers/default_controller.rb:17:in `create'
+  app/controllers/default_controller.rb:16:in `map'
+  app/controllers/default_controller.rb:16:in `create'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (94.7ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing DefaultController#create (for 127.0.0.1 at 2009-12-09 06:42:02) [POST]
+  Parameters: {"commit"=>"Get Tweets", "authenticity_token"=>"UWMe8Im05WfVxkkoglOUF8bxLmH6q7OJT1N+IUZvmVg=", "username"=>"sirchristian", "password"=>"very_good"}
+Rendering template within layouts/application
+Rendering default/index
+Completed in 2651ms (View: 3, DB: 0) | 200 OK [http://localhost/default]
+
+
+Processing DefaultController#index (for 127.0.0.1 at 2009-12-12 09:18:50) [GET]
+Rendering template within layouts/application
+Rendering default/index
+Completed in 2888ms (View: 2888, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing DefaultController#create (for 127.0.0.1 at 2009-12-12 09:19:36) [POST]
+  Parameters: {"commit"=>"Get Tweets", "authenticity_token"=>"gE5546twE/zruAlFC9X70DxgmbdeVHB2R61WFrnwjaw=", "username"=>"sirchristian", "password"=>"very_good"}
+
+Errno::ENOENT (No such file or directory - tweets.raw):
+  app/controllers/default_controller.rb:17:in `initialize'
+  app/controllers/default_controller.rb:17:in `new'
+  app/controllers/default_controller.rb:17:in `create'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (85.9ms)
+Rendered rescues/_request_and_response (2.9ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing DefaultController#create (for 127.0.0.1 at 2009-12-12 09:21:25) [POST]
+  Parameters: {"commit"=>"Get Tweets", "authenticity_token"=>"gE5546twE/zruAlFC9X70DxgmbdeVHB2R61WFrnwjaw=", "username"=>"sirchristian", "password"=>"very_good"}
+Rendering template within layouts/application
+Rendering default/index
+Completed in 3689ms (View: 3, DB: 0) | 200 OK [http://localhost/default]
+
+
+Processing DefaultController#create (for 127.0.0.1 at 2009-12-12 09:30:51) [POST]
+  Parameters: {"commit"=>"Get Tweets", "authenticity_token"=>"gE5546twE/zruAlFC9X70DxgmbdeVHB2R61WFrnwjaw=", "username"=>"sirchristian", "password"=>"very_good"}
+Rendering template within layouts/application
+Rendering default/index
+Completed in 3690ms (View: 3, DB: 0) | 200 OK [http://localhost/default]
+
+
+Processing DefaultController#index (for 127.0.0.1 at 2009-12-12 10:07:27) [GET]
+Rendering template within layouts/application
+Rendering default/index
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://localhost/default]
+
+
+Processing DefaultController#create (for 127.0.0.1 at 2009-12-12 10:07:29) [POST]
+  Parameters: {"commit"=>"Get Tweets", "authenticity_token"=>"gE5546twE/zruAlFC9X70DxgmbdeVHB2R61WFrnwjaw=", "username"=>"sirchristian", "password"=>"very_good"}
+Rendering template within layouts/application
+Rendering default/index
+Completed in 5259ms (View: 3, DB: 0) | 200 OK [http://localhost/default]
+
+
+Processing DefaultController#index (for 127.0.0.1 at 2009-12-19 12:29:05) [GET]
+Rendering template within layouts/application
+Rendering default/index
+Completed in 3597ms (View: 3595, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing DefaultController#create (for 127.0.0.1 at 2009-12-19 12:29:11) [POST]
+  Parameters: {"commit"=>"Get Tweets", "authenticity_token"=>"noT00kLOgkK+avnjcKxNppdUIbth3ciquC1aDUa/9WE=", "username"=>"sirchristian", "password"=>"very_good"}
+
+EOFError (end of file reached):
+  C:/Ruby/lib/ruby/1.8/net/protocol.rb:133:in `sysread'
+  C:/Ruby/lib/ruby/1.8/net/protocol.rb:133:in `rbuf_fill'
+  C:/Ruby/lib/ruby/1.8/timeout.rb:62:in `timeout'
+  C:/Ruby/lib/ruby/1.8/timeout.rb:93:in `timeout'
+  C:/Ruby/lib/ruby/1.8/net/protocol.rb:132:in `rbuf_fill'
+  C:/Ruby/lib/ruby/1.8/net/protocol.rb:116:in `readuntil'
+  C:/Ruby/lib/ruby/1.8/net/protocol.rb:126:in `readline'
+  C:/Ruby/lib/ruby/1.8/net/http.rb:2020:in `read_status_line'
+  C:/Ruby/lib/ruby/1.8/net/http.rb:2009:in `read_new'
+  C:/Ruby/lib/ruby/1.8/net/http.rb:1050:in `request'
+  C:/Ruby/lib/ruby/1.8/net/http.rb:948:in `request_get'
+  C:/Ruby/lib/ruby/1.8/net/http.rb:380:in `get_response'
+  C:/Ruby/lib/ruby/1.8/net/http.rb:543:in `start'
+  C:/Ruby/lib/ruby/1.8/net/http.rb:379:in `get_response'
+  app/controllers/default_controller.rb:46:in `expand_tweet_user'
+  app/controllers/default_controller.rb:44:in `scan'
+  app/controllers/default_controller.rb:44:in `expand_tweet_user'
+  app/controllers/default_controller.rb:23:in `create'
+  app/controllers/default_controller.rb:21:in `map'
+  app/controllers/default_controller.rb:21:in `create'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (57.6ms)
+Rendered rescues/_request_and_response (3.9ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing DefaultController#create (for 127.0.0.1 at 2009-12-19 12:31:04) [POST]
+  Parameters: {"commit"=>"Get Tweets", "authenticity_token"=>"noT00kLOgkK+avnjcKxNppdUIbth3ciquC1aDUa/9WE=", "username"=>"sirchristian", "password"=>"very_good"}
+
+EOFError (end of file reached):
+  C:/Ruby/lib/ruby/1.8/net/protocol.rb:133:in `sysread'
+  C:/Ruby/lib/ruby/1.8/net/protocol.rb:133:in `rbuf_fill'
+  C:/Ruby/lib/ruby/1.8/timeout.rb:62:in `timeout'
+  C:/Ruby/lib/ruby/1.8/timeout.rb:93:in `timeout'
+  C:/Ruby/lib/ruby/1.8/net/protocol.rb:132:in `rbuf_fill'
+  C:/Ruby/lib/ruby/1.8/net/protocol.rb:116:in `readuntil'
+  C:/Ruby/lib/ruby/1.8/net/protocol.rb:126:in `readline'
+  C:/Ruby/lib/ruby/1.8/net/http.rb:2020:in `read_status_line'
+  C:/Ruby/lib/ruby/1.8/net/http.rb:2009:in `read_new'
+  C:/Ruby/lib/ruby/1.8/net/http.rb:1050:in `request'
+  C:/Ruby/lib/ruby/1.8/net/http.rb:948:in `request_get'
+  C:/Ruby/lib/ruby/1.8/net/http.rb:380:in `get_response'
+  C:/Ruby/lib/ruby/1.8/net/http.rb:543:in `start'
+  C:/Ruby/lib/ruby/1.8/net/http.rb:379:in `get_response'
+  app/controllers/default_controller.rb:46:in `expand_tweet_user'
+  app/controllers/default_controller.rb:44:in `scan'
+  app/controllers/default_controller.rb:44:in `expand_tweet_user'
+  app/controllers/default_controller.rb:23:in `create'
+  app/controllers/default_controller.rb:21:in `map'
+  app/controllers/default_controller.rb:21:in `create'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (43.9ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing DefaultController#create (for 127.0.0.1 at 2009-12-19 12:32:49) [POST]
+  Parameters: {"commit"=>"Get Tweets", "authenticity_token"=>"noT00kLOgkK+avnjcKxNppdUIbth3ciquC1aDUa/9WE=", "username"=>"sirchristian", "password"=>"very_good"}
+
+EOFError (end of file reached):
+  C:/Ruby/lib/ruby/1.8/net/protocol.rb:133:in `sysread'
+  C:/Ruby/lib/ruby/1.8/net/protocol.rb:133:in `rbuf_fill'
+  C:/Ruby/lib/ruby/1.8/timeout.rb:62:in `timeout'
+  C:/Ruby/lib/ruby/1.8/timeout.rb:93:in `timeout'
+  C:/Ruby/lib/ruby/1.8/net/protocol.rb:132:in `rbuf_fill'
+  C:/Ruby/lib/ruby/1.8/net/protocol.rb:116:in `readuntil'
+  C:/Ruby/lib/ruby/1.8/net/protocol.rb:126:in `readline'
+  C:/Ruby/lib/ruby/1.8/net/http.rb:2020:in `read_status_line'
+  C:/Ruby/lib/ruby/1.8/net/http.rb:2009:in `read_new'
+  C:/Ruby/lib/ruby/1.8/net/http.rb:1050:in `request'
+  C:/Ruby/lib/ruby/1.8/net/http.rb:948:in `request_get'
+  C:/Ruby/lib/ruby/1.8/net/http.rb:380:in `get_response'
+  C:/Ruby/lib/ruby/1.8/net/http.rb:543:in `start'
+  C:/Ruby/lib/ruby/1.8/net/http.rb:379:in `get_response'
+  app/controllers/default_controller.rb:47:in `expand_tweet_user'
+  app/controllers/default_controller.rb:44:in `scan'
+  app/controllers/default_controller.rb:44:in `expand_tweet_user'
+  app/controllers/default_controller.rb:23:in `create'
+  app/controllers/default_controller.rb:21:in `map'
+  app/controllers/default_controller.rb:21:in `create'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (109.4ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#create (for 127.0.0.1 at 2009-12-19 12:40:53) [POST]
+  Parameters: {"commit"=>"Get Tweets", "authenticity_token"=>"noT00kLOgkK+avnjcKxNppdUIbth3ciquC1aDUa/9WE=", "username"=>"sirchristian", "password"=>"very_good"}
+
+SyntaxError (E:/sirchris/Documents/Ruby/tweet+expand/app/controllers/default_controller.rb:46: syntax error, unexpected '=', expecting '}'
+		isRedirect? = false
+		             ^
+E:/sirchris/Documents/Ruby/tweet+expand/app/controllers/default_controller.rb:49: syntax error, unexpected '=', expecting kEND
+				isRedirect? = response.is_a?(Net::HTTPRedirection)
+				             ^):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (33.2ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing DefaultController#create (for 127.0.0.1 at 2009-12-19 12:42:19) [POST]
+  Parameters: {"commit"=>"Get Tweets", "authenticity_token"=>"noT00kLOgkK+avnjcKxNppdUIbth3ciquC1aDUa/9WE=", "username"=>"sirchristian", "password"=>"very_good"}
+
+NoMethodError (undefined method `isRedirect?' for #<DefaultController:0x957c078>):
+  app/controllers/default_controller.rb:53:in `expand_tweet_user'
+  app/controllers/default_controller.rb:44:in `scan'
+  app/controllers/default_controller.rb:44:in `expand_tweet_user'
+  app/controllers/default_controller.rb:23:in `create'
+  app/controllers/default_controller.rb:21:in `map'
+  app/controllers/default_controller.rb:21:in `create'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (99.6ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing DefaultController#create (for 127.0.0.1 at 2009-12-19 12:42:28) [POST]
+  Parameters: {"commit"=>"Get Tweets", "authenticity_token"=>"noT00kLOgkK+avnjcKxNppdUIbth3ciquC1aDUa/9WE=", "username"=>"sirchristian", "password"=>"very_good"}
+Rendering template within layouts/application
+Rendering default/index
+Completed in 7512ms (View: 3, DB: 0) | 200 OK [http://localhost/default]
+
+
+Processing DefaultController#index (for 127.0.0.1 at 2009-12-19 12:42:41) [GET]
+Rendering template within layouts/application
+Rendering default/index
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://localhost/default]
+
+
+Processing RssController#index (for 127.0.0.1 at 2009-12-19 12:59:12) [GET]
+  Parameters: {"user"=>"sirchristian"}
+
+ActionController::UnknownAction (No action responded to index. Actions: ):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-12-19 12:59:17) [GET]
+
+ActionController::RoutingError (No route matches "/rss/" with {:method=>:get}):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-12-19 13:00:22) [GET]
+
+ActionController::RoutingError (No route matches "/rss/" with {:method=>:get}):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing RssController#index (for 127.0.0.1 at 2009-12-19 13:00:25) [GET]
+  Parameters: {"user"=>"sirchristian"}
+
+ActionView::MissingTemplate (Missing template rss/index.erb in view path app/views):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing RssController#index (for 127.0.0.1 at 2009-12-19 13:01:44) [GET]
+  Parameters: {"user"=>"sirchristian"}
+Rendering template within layouts/application
+Rendering rss/index
+Completed in 9ms (View: 8, DB: 0) | 200 OK [http://localhost/rss/sirchristian]
+
+
+Processing RssController#index (for 127.0.0.1 at 2009-12-19 13:01:52) [GET]
+  Parameters: {"user"=>"sirdsfsd"}
+Rendering template within layouts/application
+Rendering rss/index
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/rss/sirdsfsd]
+
+
+Processing RssController#index (for 127.0.0.1 at 2009-12-19 13:03:15) [GET]
+  Parameters: {"user"=>"sirdsfsd"}
+Rendering template within layouts/application
+Rendering rss/index
+ERROR: compiling _run_erb_app47views47rss47index46erb RAISED compile error
+E:/sirchris/Documents/Ruby/tweet+expand/app/views/rss/index.erb:15: syntax error, unexpected '}', expecting kEND
+@output_buffer.concat "\t\t";  } ; @output_buffer.concat "\n"
+                                ^
+Function body:           def _run_erb_app47views47rss47index46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "\t<?xml version=\"1.0\" encoding=\"ISO-8859-1\" ?>\n"
+@output_buffer.concat "\t<rss version=\"2.0\">\n"
+@output_buffer.concat "\t<channel>\n"
+@output_buffer.concat "\t\t<title>"; @output_buffer.concat(( @username ).to_s); @output_buffer.concat "'s URL Expanded Tweets</title>\n"
+@output_buffer.concat "\t\t<link>http://www.twitter.com/"; @output_buffer.concat(( @username ).to_s); @output_buffer.concat "'</link>\n"
+@output_buffer.concat "\t\t<description>RSS feed of "; @output_buffer.concat(( @username ).to_s); @output_buffer.concat "'s home timeline with the URLs expanded</description>\n"
+@output_buffer.concat "\t\t"; @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<item>\n"
+@output_buffer.concat "\t\t\t\t<title>"; @output_buffer.concat(( tweet[:user] ).to_s); @output_buffer.concat ": "; @output_buffer.concat(( tweet[:text] ).to_s); @output_buffer.concat "</title>\n"
+@output_buffer.concat "\t\t\t\t<description>"; @output_buffer.concat(( tweet[:user] ).to_s); @output_buffer.concat ": "; @output_buffer.concat(( tweet[:text] ).to_s); @output_buffer.concat "</description>\n"
+@output_buffer.concat "\t\t\t\t<pubDate>"; @output_buffer.concat(( tweet[:at] ).to_s); @output_buffer.concat "</pubDate>\n"
+@output_buffer.concat "\t\t\t\t<guid>"; @output_buffer.concat(( tweet[:url] ).to_s); @output_buffer.concat "</guid>\n"
+@output_buffer.concat "\t\t\t\t<link>"; @output_buffer.concat(( tweet[:url] ).to_s); @output_buffer.concat "</link>\n"
+@output_buffer.concat "\t\t\t</item>\n"
+@output_buffer.concat "\t\t";  } ; @output_buffer.concat "\n"
+@output_buffer.concat "\t\t%>\n"
+@output_buffer.concat "\t</channel>\n"
+@output_buffer.concat "\t</rss>"; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: E:/sirchris/Documents/Ruby/tweet+expand/app/views/rss/index.erb:21:in `compile!'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:61:in `compile'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:28:in `render'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/template.rb:205:in `render_template'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:265:in `render'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:348:in `_render_with_layout'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:262:in `render'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1250:in `render_for_file'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:945:in `render_without_benchmark'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1326:in `default_render'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1332:in `perform_action_without_filters'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:617:in `call_filters'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/flash.rb:146:in `perform_action'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `send'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `process_without_filters'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:606:in `process'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:391:in `process'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:386:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/routing/route_set.rb:437:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:87:in `dispatch'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:121:in `_call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:9:in `cache'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:28:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/rails/rack/static.rb:31:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/rails/rack/log_tailer.rb:17:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/webrick.rb:50:in `service'
+C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/webrick.rb:14:in `run'
+C:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/commands/server.rb:111
+C:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+C:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+E:/sirchris/Documents/Ruby/tweet+expand/app/views/rss/index.erb:15: syntax error, unexpected '}', expecting kEND
+@output_buffer.concat "\t\t";  } ; @output_buffer.concat "\n"
+                                ^) on line #15 of app/views/rss/index.erb:
+12: 				<pubDate><%= tweet[:at] %></pubDate>
+13: 				<guid><%= tweet[:url] %></guid>
+14: 				<link><%= tweet[:url] %></link>
+15: 			</item>
+16: 		<% } %>
+17: 		%>
+18: 	</channel>
+
+    app/views/rss/index.erb:21:in `compile!'
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (72.3ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing RssController#index (for 127.0.0.1 at 2009-12-19 13:03:52) [GET]
+  Parameters: {"user"=>"sirdsfsd"}
+Rendering template within layouts/application
+Rendering rss/index
+Completed in 9ms (View: 7, DB: 0) | 200 OK [http://localhost/rss/sirdsfsd]
+
+
+Processing RssController#index (for 127.0.0.1 at 2009-12-19 13:03:57) [GET]
+  Parameters: {"user"=>"fsdfasdf"}
+Rendering template within layouts/application
+Rendering rss/index
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/rss/fsdfasdf]
+
+
+Processing RssController#index (for 127.0.0.1 at 2009-12-19 13:05:03) [GET]
+  Parameters: {"user"=>"fsdfasdf"}
+Rendering template within layouts/application
+Rendering rss/index
+Completed in 10ms (View: 8, DB: 0) | 200 OK [http://localhost/rss/fsdfasdf]
+
+
+Processing RssController#index (for 127.0.0.1 at 2009-12-19 13:05:08) [GET]
+  Parameters: {"user"=>"sirchristian"}
+Rendering template within layouts/application
+Rendering rss/index
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/rss/sirchristian]

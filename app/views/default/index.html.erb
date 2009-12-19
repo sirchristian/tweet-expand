@@ -1,0 +1,32 @@
+<% if @tweets == nil %>
+	<h1>Welcome to Tweet+Expand</h1>
+	<h3>Just enter your twitter username/password and we will create an RSS feed for you with expanded URLs</h3>
+	<% form_tag do  %>
+		<%= label_tag(:username, "Username") %>
+		<%= text_field_tag :username %>
+		<br />
+		<%= label_tag(:password, "Password") %>
+		<%= password_field_tag :password %>
+		<br />
+		<%= submit_tag 'Get Tweets' %>
+	<% end %>
+<% else %>
+	<?xml version="1.0" encoding="ISO-8859-1" ?>
+	<rss version="2.0">
+	<channel>
+		<title><%= @username %>'s URL Expanded Tweets</title>
+		<link>http://www.twitter.com/<%= @username %>'</link>
+		<description>RSS feed of <%= @username %>'s home timeline with the URLs expanded</description>
+		<% @tweets.each { |tweet| %>
+			<item>
+				<title><%= tweet[:user] %>: <%= tweet[:text] %></title>
+				<description><%= tweet[:user] %>: <%= tweet[:text] %></description>
+				<pubDate><%= tweet[:at] %></pubDate>
+				<guid><%= tweet[:url] %></guid>
+				<link><%= tweet[:url] %></link>
+			</item>
+		<br />
+	<% } %>
+	</channel>
+	</rss?
+<% end %>

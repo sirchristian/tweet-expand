@@ -1,0 +1,19 @@
+	<?xml version="1.0" encoding="ISO-8859-1" ?>
+	<rss version="2.0">
+	<channel>
+		<title><%= @username %>'s URL Expanded Tweets</title>
+		<link>http://www.twitter.com/<%= @username %>'</link>
+		<description>RSS feed of <%= @username %>'s home timeline with the URLs expanded</description>
+		<% if false %>
+		<% @tweets.each { |tweet| %>
+			<item>
+				<title><%= tweet[:user] %>: <%= tweet[:text] %></title>
+				<description><%= tweet[:user] %>: <%= tweet[:text] %></description>
+				<pubDate><%= tweet[:at] %></pubDate>
+				<guid><%= tweet[:url] %></guid>
+				<link><%= tweet[:url] %></link>
+			</item>
+		<% } %>
+		<% end %>
+	</channel>
+	</rss>
